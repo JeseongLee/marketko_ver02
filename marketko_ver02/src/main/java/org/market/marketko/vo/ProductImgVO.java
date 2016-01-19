@@ -2,16 +2,16 @@ package org.market.marketko.vo;
 
 public class ProductImgVO {
 	private String productImgName;
-	private ProductVO productVO;
+	private BoardVO boardVO;
 	private String productImgPath;
 	public ProductImgVO() {
 		super();
 	}
-	public ProductImgVO(String productImgName, ProductVO productVO,
+	public ProductImgVO(String productImgName, BoardVO boardVO,
 			String productImgPath) {
 		super();
 		this.productImgName = productImgName;
-		this.productVO = productVO;
+		this.boardVO = boardVO;
 		this.productImgPath = productImgPath;
 	}
 	public String getProductImgName() {
@@ -20,11 +20,11 @@ public class ProductImgVO {
 	public void setProductImgName(String productImgName) {
 		this.productImgName = productImgName;
 	}
-	public ProductVO getProductVO() {
-		return productVO;
+	public BoardVO getBoardVO() {
+		return boardVO;
 	}
-	public void setProductVO(ProductVO productVO) {
-		this.productVO = productVO;
+	public void setBoardVO(BoardVO boardVO) {
+		this.boardVO = boardVO;
 	}
 	public String getProductImgPath() {
 		return productImgPath;
@@ -35,7 +35,7 @@ public class ProductImgVO {
 	@Override
 	public String toString() {
 		return "ProductImgVO [productImgName=" + productImgName
-				+ ", productVO=" + productVO + ", productImgPath="
+				+ ", productVO=" + boardVO + ", productImgPath="
 				+ productImgPath + "]";
 	}
 }

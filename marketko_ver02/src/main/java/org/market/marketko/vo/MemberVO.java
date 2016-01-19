@@ -4,7 +4,7 @@ public class MemberVO {
 	private String memberEmail;
 	private String memberNickName;
 	private String memberBirth;
-	private int memberPnumber;
+	private String memberPnumber;
 	private String memberPassword;
 	private String memberAuth;
 	private int memberPoint;
@@ -18,7 +18,7 @@ public class MemberVO {
 	}
 
 	public MemberVO(String memberEmail, String memberNickName,
-			String memberBirth, int memberPnumber, String memberPassword,
+			String memberBirth, String memberPnumber, String memberPassword,
 			String memberAuth, int memberPoint, int memberCash,
 			String memberJoinDate, String memberLoginTime,
 			int memberDailyAttendedCount) {
@@ -60,11 +60,11 @@ public class MemberVO {
 		this.memberBirth = memberBirth;
 	}
 
-	public int getMemberPnumber() {
+	public String getMemberPnumber() {
 		return memberPnumber;
 	}
 
-	public void setMemberPnumber(int memberPnumber) {
+	public void setMemberPnumber(String memberPnumber) {
 		this.memberPnumber = memberPnumber;
 	}
 
