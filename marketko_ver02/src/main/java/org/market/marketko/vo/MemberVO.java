@@ -3,6 +3,7 @@ package org.market.marketko.vo;
 public class MemberVO {
 	private String memberEmail;
 	private String memberNickName;
+	private String memberName;
 	private String memberBirth;
 	private String memberPnumber;
 	private String memberPassword;
@@ -17,7 +18,7 @@ public class MemberVO {
 		super();
 	}
 
-	public MemberVO(String memberEmail, String memberNickName,
+	public MemberVO(String memberEmail, String memberNickName, String memberName,
 			String memberBirth, String memberPnumber, String memberPassword,
 			String memberAuth, int memberPoint, int memberCash,
 			String memberJoinDate, String memberLoginTime,
@@ -25,6 +26,7 @@ public class MemberVO {
 		super();
 		this.memberEmail = memberEmail;
 		this.memberNickName = memberNickName;
+		this.memberName = memberName;
 		this.memberBirth = memberBirth;
 		this.memberPnumber = memberPnumber;
 		this.memberPassword = memberPassword;
@@ -50,6 +52,14 @@ public class MemberVO {
 
 	public void setMemberNickName(String memberNickName) {
 		this.memberNickName = memberNickName;
+	}
+	
+	public String getMemberName() {
+		return memberName;
+	}
+
+	public void setMemberName(String memberName) {
+		this.memberName = memberName;
 	}
 
 	public String getMemberBirth() {
@@ -127,13 +137,15 @@ public class MemberVO {
 	@Override
 	public String toString() {
 		return "MemberVO [memberEmail=" + memberEmail + ", memberNickName="
-				+ memberNickName + ", memberBirth=" + memberBirth
-				+ ", memberPnumber=" + memberPnumber + ", memberPassword="
-				+ memberPassword + ", memberAuth=" + memberAuth
-				+ ", memberPoint=" + memberPoint + ", memberCash=" + memberCash
-				+ ", memberJoinDate=" + memberJoinDate + ", memberLoginTime="
-				+ memberLoginTime + ", memberDailyAttendedCount="
-				+ memberDailyAttendedCount + "]";
+				+ memberNickName + ", memberName=" + memberName
+				+ ", memberBirth=" + memberBirth + ", memberPnumber="
+				+ memberPnumber + ", memberPassword=" + memberPassword
+				+ ", memberAuth=" + memberAuth + ", memberPoint=" + memberPoint
+				+ ", memberCash=" + memberCash + ", memberJoinDate="
+				+ memberJoinDate + ", memberLoginTime=" + memberLoginTime
+				+ ", memberDailyAttendedCount=" + memberDailyAttendedCount
+				+ "]";
 	}
+
 
 }

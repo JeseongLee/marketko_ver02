@@ -7,6 +7,7 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
 	<!-- 사용할 클래스에 대한 별칭을 명시한다.  -->
 	<typeAliases>
      	<typeAlias type="org.market.marketko.vo.MemberVO" alias="memberVO"/>
+     	<typeAlias type="org.market.marketko.vo.DealerInfoVO" alias="dealerInfoVO"/>
 	</typeAliases>	
     <!-- mybatis sql 정의 xml을 mapping  -->
 	<mappers>
