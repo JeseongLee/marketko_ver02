@@ -312,7 +312,7 @@ i.red{
 }
 
 /**
- * 상품 상세보기
+ * 상품 상세보기 modal창 조정
  */
 .vertical-alignment-helper {
     display:table;
@@ -342,4 +342,98 @@ i.red{
 }
 .btn-product{
 	width: 100%;
+}
+
+/**
+ * 상품 상세보기 내부
+ * @author Jeseong Lee
+ */
+.productDetailViewHeader{
+	padding: 5px;
+	padding-top: 10px;
+}
+ /** 좌측 */
+.productDetailLeft{
+	height: 350px;
+	width: 370px;
+	padding: 0;
+	padding-right: 7px;
+}
+.productDetailLeft .productDetailViewImgBox{
+	height: 350px;
+	width: 370px;
+	opacity: 1;
+	display: block;
+	position: relative;
+}
+.productDetailLeft .productDetailViewImgBox .productDetailViewImg{
+	height: 350px;
+	width: 370px;
+	margin-left: auto;
+    margin-right: auto;
+}
+/** 우측 */
+.productDetailRight{
+	height: 377px;
+	width: 360px;
+	padding: 0;
+	padding-left: 17px;
+	font-size: 12px;
+}
+.productDetailRight .seperation{
+	margin:0px;
+	margin-top:5px;
+	margin-bottom:5px;
+}
+.productDetailRight .price{
+	margin-top: 31.517px;
+}
+.productDetailRight .rightTab{
+	margin-left: 47px;
+}
+.productDetailRight .rightTab3Char{
+	margin-left: 51px;
+}
+.productDetailRight .evaluate .result{
+	font-size: 18px;
+	font-weight: bolder;
+}
+#deliveryPolicy{
+	color: #c0c0c0;
+	font-weight: lighter;
+}
+#deliveryPolicy2{
+	color: #c0c0c0;
+	margin-left: 86px;
+	font-weight: lighter;
+}
+.productDetailRight .rightTab4Char{
+	margin-left: 38px;
+}
+.productDetailRight .rightTab5Char{
+	margin-left: 26px;
+}
+.productDetailRight .price .orginal{
+	color: #c0c0c0;
+	font-size: 20px;
+	font-weight: bolder;
+}
+.productDetailRight .price .won{
+	color: #c0c0c0;
+}
+.productDetailRight .price .discount{
+	color: #0d93e3;
+	font-size: 20px;
+	font-weight: bolder;
+}
+.productDetailRight .price .disWon{
+	color: #0d93e3;
+}
+.productDetailRight .price .disValue{
+	color: #0d93e3;
+	font-size: 11px;
+	font-style: italic;
+}
+.productDetailRight .evaluateList .listInfo{
+	height: 25px;
 }

@@ -69,10 +69,10 @@
 					<div class="panel-heading">
 						<div class="row text-center">
 							<div class="col-xs-6 ">
-								<a href="#" id="login-form-link">Login</a>
+								<a href="javascript:;" id="login-form-link">Login</a>
 							</div>
 							<div class="col-xs-6">
-								<a href="#" class="active" id="register-form-link">Register</a>
+								<a href="javascript:;" class="active" id="register-form-link">Register</a>
 							</div>
 						</div>
 						<hr>
@@ -144,61 +144,114 @@
 
 <!-- 상품 보기 모달창 시작 -->
 <div class="modal fade" id="detailProductViewModal">
-<div class="vertical-alignment-helper">
-  <div class="modal-dialog vertical-align-center">
-  <div class="modal-content">
-	<div class="container detailProductView">
-          <div class="modal-header">
-              <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
-              <h4 class="modal-title" id="myModalLabel">Login to site.com</h4>
-          </div>
-          <div class="modal-body">
-              <div class="row">
-                  <div class="col-md-6">
-                  	<div class="thumbnail" >
-					<h4 class="text-center"><span class="label label-info">Samsung</span></h4>
-					<img src="http://placehold.it/650x450&text=Galaxy S5" class="img-responsive">
-					<div class="caption">
+	<div class="vertical-alignment-helper">
+		<div class="modal-dialog vertical-align-center">
+			<div class="modal-content">
+				<div class="container detailProductView">
+					<div class="modal-header productDetailViewHeader">
+						<button type="button" class="close" data-dismiss="modal">
+							<span aria-hidden="true">×</span>
+							<span class="sr-only">Close</span>
+						</button>
+						<h6 class="modal-title" id="myModalLabel">상품 간편 보기</h6>
+					</div>
+					<div class="modal-body">
 						<div class="row">
-							<div class="col-md-6 col-xs-6">
-								<h3>Galaxy S5</h3>
+							<!-- 상품 보기 좌측 시작 -->
+							<div class="col-md-6 productDetailLeft">
+								<div class="productDetailViewImgBox">
+									<h5 class="text-left"><span class="label label-warning">[카테고리]</span>상품명입니다</h5>
+									<img src="http://shop2.phinf.naver.net/20151214_44/deming_1450019940311yTYHR_JPEG/56640932808510727_760136195.jpg?type=m180" class="productDetailViewImg">
+								</div>
 							</div>
-							<div class="col-md-6 col-xs-6 price">
-								<h3>
-								<label>$649.99</label></h3>
+							<!-- 상품 보기 좌측 끝 -->
+							<!-- 상품 보기 우측 시작 -->
+							<div class="col-md-6 productDetailRight">
+								<!-- 가격 정보 -->
+								<div class="price">
+									<div>
+										판매가<span class="rightTab"><span class="orginal"><strong>34,900</strong></span><span class="won">원</span></span>
+									</div>
+									<div>
+										할인가<span class="rightTab"><span class="discount"><strong>18,900</strong></span><span class="disWon">원</span></span>
+										<span class="disValue">(16,000원 할인)</span>
+									</div>
+								</div>
+								<hr class="seperation">
+								<!-- 구매 혜택 -->
+								<div class="benefit">
+									<div>
+										구매혜택<span class="rightTab4Char">무이자 할부</span>
+									</div>
+									<div>
+										구매평작성<span class="rightTab5Char">추가 150p</span>
+									</div>
+								</div>
+								<hr class="seperation">
+								<!-- 배송 정보 -->
+								<div class="delivery">
+									<div>
+										배송방법<span class="rightTab4Char">택배</span>
+									</div>
+									<div>
+										배송비<span class="rightTab3Char">2,500원
+										&nbsp;&nbsp;<span id="deliveryPolicy">(50,000원 이상 구매시 무료 /</span><br>
+										<span id="deliveryPolicy2">제주 외 도서 산간 지역 추가 5,000원 추가)</span></span>
+									</div>
+								</div>
+								<hr class="seperation"><br>
+								<!-- 상품 만족도 결과 -->
+								<div class="evaluate">
+									<div>
+										상품만족도<span class="rightTab5Char"><span class="result">87%</span></span>
+										<span class="rightTab5Char">구매평<span class="rightTab5Char"><span class="result">145</span></span></span>
+									</div>
+								</div>
+								<br>
+								<!-- 구매평 보기 -->
+								<div class="evaluateList">
+									<div class="listHeader">
+										<span class="col-xs-10 menu">
+											<strong>구매평(14건)</strong>
+										</span>
+										<span class="col-xs-2">
+											<a href="javascript:;"><i class="fa fa-caret-square-o-left"></i></a>
+											<a href="javascript:;"><i class="fa fa-caret-square-o-right"></i></a>
+										</span>
+									</div>
+								<br><br>
+									<div class="listInfo">
+										<span class="col-mld-4">쓰레기를 샀어요^^</span>
+										<span class="col-mld-3">닉네임</span>
+										<span class="col-mld-3">작성일</span>
+										<span class="col-mld-2">5점</span>
+									</div>
+									<div class="listInfo">
+										<span class="col-mld-4">쓰레기를 샀어요^^</span>
+										<span class="col-mld-3">닉네임</span>
+										<span class="col-mld-3">작성일</span>
+										<span class="col-mld-2">5점</span>
+									</div>
+									<div class="listInfo">
+										<span class="col-mld-4">쓰레기를 샀어요^^</span>
+										<span class="col-mld-3">닉네임</span>
+										<span class="col-mld-3">작성일</span>
+										<span class="col-mld-2">5점</span>
+									</div>
+								</div>
 							</div>
+							<!-- 상품 보기 우측 끝 -->
 						</div>
-						<p>32GB, 2GB Ram, 1080HD, 5.1 inches, Android</p>
-						<div class="row">
-							<div class="col-md-6">
-								<a class="btn btn-primary btn-product"><span class="glyphicon glyphicon-thumbs-up"></span> Like</a> 
-							</div>
-							<div class="col-md-6">
-								<a href="#" class="btn btn-success btn-product"><span class="glyphicon glyphicon-shopping-cart"></span> Buy</a></div>
-						</div>
-
-						<p> </p>
+					</div>
+					<div class="modal-footer productDetailViewFooter">
+					<center>
+						<a class="btn btn-default detailViewBtn" href="javascript:;" role="button">상세보기</a>
+						<a class="btn btn-default closeBtn" href="javascript:;" role="button" data-dismiss="modal">Close</a>
+					</center>
 					</div>
 				</div>
-                  
-                  </div>
-                  <div class="col-md-6">
-                      <p class="lead">Register now for <span class="text-success">FREE</span></p>
-                      <ul class="list-unstyled" style="line-height: 2">
-                          <li><span class="fa fa-check text-success"></span> See all your orders</li>
-                          <li><span class="fa fa-check text-success"></span> Fast re-order</li>
-                          <li><span class="fa fa-check text-success"></span> Save your favorites</li>
-                          <li><span class="fa fa-check text-success"></span> Fast checkout</li>
-                          <li><span class="fa fa-check text-success"></span> Get a gift <small>(only new customers)</small></li>
-                          <li><a href="/read-more/"><u>Read more</u></a></li>
-                      </ul>
-                      <p><a href="/new-customer/" class="btn btn-info btn-block">Yes please, register now!</a></p>
-                  </div>
-              </div>
-          </div>
-      </div>
-     </div>
-     </div>
-  </div>
+			</div>
+		</div>
+	</div>
 </div>
-  <!-- 상품 보기 모달창 끝 -->
+<!-- 상품 보기 모달창 끝 -->

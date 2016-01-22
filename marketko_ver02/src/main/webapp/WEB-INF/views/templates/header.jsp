@@ -159,6 +159,16 @@
 				</ul>				
 			</li>
             <li><a href="#">Store locator</a></li>
+			<!-- 검색 -->
+			<li class="span12">
+	            <form id="custom-search-form" class="form-search form-horizontal pull-right">
+	                <div class="input-append span12">
+	                    <input type="text" class="search-query mac-style" placeholder="Search">
+	                    <button type="submit" class="btn"><i class="fa fa-search"></i></button>
+	                </div>
+	            </form>
+	        </li>
+    	    <!-- 검색 -->
 		</ul>
         <ul class="nav navbar-nav navbar-right">
         <li><a href="#" class="buyerRegister">판매자등록하기</a></li>
