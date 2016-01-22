@@ -21,11 +21,16 @@
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 <![endif]-->
 <!-- 부트스트랩 사용을 위한 상단 설정 완료 -->
+<!-- 메인카드 -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 <!-- cutomize 하는 css -->
- <link href="${initParam.root}resources/css/main.css" rel="stylesheet"/> 
+ <link href="${initParam.root}resources/css/main.css" rel="stylesheet"/>
+ <link href="${initParam.root}resources/css/style.css" rel="stylesheet"/>
+ <link href="${initParam.root}resources/css/header.css" rel="stylesheet"/>
  <!-- 아이콘 만들기 api font-awesome -->
  <link href="${initParam.root}resources/css/font-awesome.min.css" rel="stylesheet" />
-    
+ <!-- 상품 보기 -->
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet"> 
 </head>
 
 

@@ -16,6 +16,17 @@
 		<put-attribute name="main"  value="/WEB-INF/views/main.jsp"  />
 	</definition>
 	
+	<!-- 로그인 페이지(로그인 실패시 이동 -->
+	<definition name="loginPage" extends="home">
+		<put-attribute name="main"  value="/WEB-INF/views/loginPage.jsp"  />
+	</definition>
+	
+	<!-- 상품 클릭시 상세보기로 이동 -->
+	<definition name="detailProductView" extends="home">
+		<put-attribute name="main"  value="/WEB-INF/views/detailProductView.jsp"  />
+	</definition>
+	
+	
 </tiles-definitions>
 
 

@@ -162,20 +162,27 @@
 		</ul>
         <ul class="nav navbar-nav navbar-right">
         <li><a href="#" class="buyerRegister">판매자등록하기</a></li>
-        <li><a href="#" class="memberRegister">회원가입</a></li>
-        <li><a href="#" class="memberLogin">로그인</a></li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">My account <span class="caret"></span></a>
-          <ul class="dropdown-menu" role="menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-          </ul>
-        </li>
-        <li><a href="#">My cart (0) items</a></li>
-      </ul>
+       	<c:choose>
+       		<c:when test="${sessionScope.memberVO==null}">
+		        <li><a href="#" class="memberRegister">회원가입</a></li>
+		        <li><a href="#" class="memberLogin">로그인</a></li>
+	        </c:when>
+	        <c:otherwise>
+	        	<li><a href="memberLogout.mako">로그아웃</a></li>
+		        <li class="dropdown">
+		          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">My account <span class="caret"></span></a>
+		          <ul class="dropdown-menu" role="menu">
+		            <li><a href="#">Action</a></li>
+		            <li><a href="#">Another action</a></li>
+		            <li><a href="#">Something else here</a></li>
+		            <li class="divider"></li>
+		            <li><a href="#">Separated link</a></li>
+		          </ul>
+		        </li>
+		        <li><a href="#">My cart (0) items</a></li>
+	        </c:otherwise>
+		</c:choose>
+		</ul>
 	</div><!-- /.nav-collapse -->
   </nav>
 </div>

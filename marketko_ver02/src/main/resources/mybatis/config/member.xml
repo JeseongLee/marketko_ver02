@@ -3,34 +3,42 @@
 PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="member">
-<resultMap type="memberVO" id="memberVOMap">
-	<result column="MEMBER_EMAIL" property="memberEmail"/>
-	<result column="MEMBER_NICKNAME" property="memberNickName"/>
-	<result column="MEMBER_NAME" property="memberName"/>
-	<result column="MEMBER_BIRTH" property="memberBirth"/>
-	<result column="MEMBER_PNUMBER" property="memberPnumber"/>
-	<result column="MEMBER_PASSWORD" property="memberPassword"/>
-	<result column="MEMBER_AUTH" property="memberAuth"/>
-	<result column="MEMBER_POINT" property="memberPoint"/>
-	<result column="MEMBER_CASH" property="memberCash"/>
-	<result column="MEMBER_JOINDATE" property="memberJoinDate"/>
-	<result column="MEMBER_LOGINTIME_INFO" property="memberLoginTime"/>
-	<result column="MEMBER_DAILY_ATTENDED_COUNT" property="memberDailyAttendedCount"/>
-</resultMap>
-<resultMap type="dealerInfoVO" id="dealerInfoVOMap">
-	<result column="MEMBER_EMAIL" property="memberVO.memberEmail"/>
-	<result column="PERMIT_NUMBER" property="permitNumber"/>
-	<result column="DEALER_GRADE" property="dealerGrade"/>
-</resultMap>
+	<resultMap type="memberVO" id="memberVOMap">
+		<result column="MEMBER_EMAIL" property="memberEmail"/>
+		<result column="MEMBER_NICKNAME" property="memberNickName"/>
+		<result column="MEMBER_NAME" property="memberName"/>
+		<result column="MEMBER_BIRTH" property="memberBirth"/>
+		<result column="MEMBER_PNUMBER" property="memberPnumber"/>
+		<result column="MEMBER_PASSWORD" property="memberPassword"/>
+		<result column="MEMBER_AUTH" property="memberAuth"/>
+		<result column="MEMBER_POINT" property="memberPoint"/>
+		<result column="MEMBER_CASH" property="memberCash"/>
+		<result column="MEMBER_JOINDATE" property="memberJoinDate"/>
+		<result column="MEMBER_LOGINTIME_INFO" property="memberLoginTime"/>
+		<result column="MEMBER_DAILY_ATTENDED_COUNT" property="memberDailyAttendedCount"/>
+	</resultMap>
+	<resultMap type="dealerInfoVO" id="dealerInfoVOMap">
+		<result column="MEMBER_EMAIL" property="memberVO.memberEmail"/>
+		<result column="PERMIT_NUMBER" property="permitNumber"/>
+		<result column="DEALER_GRADE" property="dealerGrade"/>
+	</resultMap>
+	
+	<!-- ************************ RESULT MAP ************************ -->
 
-<insert id="memberRegister" parameterType="memberVO">
-	INSERT INTO MEMBER (MEMBER_EMAIL, MEMBER_NICKNAME, MEMBER_NAME, MEMBER_BIRTH, MEMBER_PNUMBER, MEMBER_PASSWORD, MEMBER_AUTH, MEMBER_JOINDATE) 
-	VALUES (#{memberEmail}, #{memberNickName}, #{memberName}, #{memberBirth}, #{memberPnumber}, #{memberPassword}, #{memberAuth}, SYSDATE)
-</insert>
-
-<insert id="dealerInfoRegister" parameterType="dealerInfoVO">
-	INSERT INTO DEALER_INFO (MEMBER_EMAIL, PERMIT_NUMBER, DEALER_GRADE)
-	VALUES (#{memberVO.memberEmail},#{permitNumber},#{dealerGrade})
-</insert>
+	<insert id="memberRegister" parameterType="memberVO">
+		INSERT INTO MEMBER (MEMBER_EMAIL, MEMBER_NICKNAME, MEMBER_NAME, MEMBER_BIRTH, MEMBER_PNUMBER, MEMBER_PASSWORD, MEMBER_AUTH, MEMBER_JOINDATE) 
+		VALUES (#{memberEmail}, #{memberNickName}, #{memberName}, #{memberBirth}, #{memberPnumber}, #{memberPassword}, #{memberAuth}, SYSDATE)
+	</insert>
+	
+	<insert id="dealerInfoRegister" parameterType="dealerInfoVO">
+		INSERT INTO DEALER_INFO (MEMBER_EMAIL, PERMIT_NUMBER, DEALER_GRADE)
+		VALUES (#{memberVO.memberEmail},#{permitNumber},#{dealerGrade})
+	</insert>
+	
+	<!-- 기본 로그인 Jeseong Lee -->
+	<select id="loginMember" resultMap="memberVOMap">
+		select MEMBER_EMAIL from MEMBER 
+		where MEMBER_EMAIL=#{memberEmail} and MEMBER_PASSWORD=#{memberPassword}
+	</select>
 </mapper> 		
  

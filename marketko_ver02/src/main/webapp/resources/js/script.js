@@ -86,7 +86,17 @@ $(document).ready(function(){ //DOM이 준비되고
 		e.preventDefault();
 	});
     
-    
+	/**
+	 * 상품 보기 모달
+	 * @author Jeseong Lee
+	 */
+	$('.detailProductViewModal').click(function(){
+		$('#detailProductViewModal').modal({
+			keyboard: true
+		});
+		e.preventDefault();
+		//다시 모달창을 열었을 대 첫 화면 띄움
+	});
     
 });//document.ready
 

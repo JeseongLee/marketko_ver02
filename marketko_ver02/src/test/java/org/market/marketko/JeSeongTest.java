@@ -5,6 +5,7 @@ import javax.annotation.Resource;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.market.marketko.model.MemberService;
+import org.market.marketko.vo.MemberVO;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
@@ -15,7 +16,11 @@ public class JeSeongTest {
 	private MemberService memberService;
 
 	@Test
-	public void test() {
-
+	public void test(){
+		MemberVO memberVO = new MemberVO();
+		memberVO.setMemberEmail("b@gmail.com");
+		memberVO.setMemberPassword("aaaa");
+		memberVO = memberService.loginMember(memberVO);
+		System.out.println(memberVO);
 	}
 }
