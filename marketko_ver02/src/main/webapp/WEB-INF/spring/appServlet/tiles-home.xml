@@ -26,6 +26,10 @@
 		<put-attribute name="main"  value="/WEB-INF/views/detailProductView.jsp"  />
 	</definition>
 	
+	<!-- 멤버 마이페이지 -->
+	<definition name ="memberMyPage" extends="home">
+		<put-attribute name="main" value="/WEB-INF/views/memberMyPage.jsp"/>
+	</definition>
 	
 </tiles-definitions>
 

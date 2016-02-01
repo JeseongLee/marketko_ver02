@@ -8,12 +8,13 @@ public class ProductVO {
 	private String productSize;
 	private String productColor;
 	private int productStock;
+	private String productImgPath;
 	public ProductVO() {
 		super();
 	}
 	public ProductVO(int productNumber, String productName, int productPrice,
 			String productMaker, String productSize, String productColor,
-			int productStock) {
+			int productStock, String productImgPath) {
 		super();
 		this.productNumber = productNumber;
 		this.productName = productName;
@@ -22,6 +23,7 @@ public class ProductVO {
 		this.productSize = productSize;
 		this.productColor = productColor;
 		this.productStock = productStock;
+		this.productImgPath = productImgPath;
 	}
 	public int getProductNumber() {
 		return productNumber;
@@ -65,13 +67,21 @@ public class ProductVO {
 	public void setProductStock(int productStock) {
 		this.productStock = productStock;
 	}
+	public String getProductImgPath() {
+		return productImgPath;
+	}
+	public void setProductImgPath(String productImgPath) {
+		this.productImgPath = productImgPath;
+	}
 	@Override
 	public String toString() {
 		return "ProductVO [productNumber=" + productNumber + ", productName="
 				+ productName + ", productPrice=" + productPrice
 				+ ", productMaker=" + productMaker + ", productSize="
 				+ productSize + ", productColor=" + productColor
-				+ ", productStock=" + productStock + "]";
+				+ ", productStock=" + productStock + ", productImgPath="
+				+ productImgPath + "]";
 	}
+	
 	
 }

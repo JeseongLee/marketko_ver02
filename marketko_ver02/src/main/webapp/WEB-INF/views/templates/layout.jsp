@@ -27,10 +27,18 @@
  <link href="${initParam.root}resources/css/main.css" rel="stylesheet"/>
  <link href="${initParam.root}resources/css/style.css" rel="stylesheet"/>
  <link href="${initParam.root}resources/css/header.css" rel="stylesheet"/>
- <!-- 아이콘 만들기 api font-awesome -->
- <link href="${initParam.root}resources/css/font-awesome.min.css" rel="stylesheet" />
- <!-- 상품 보기 -->
+ <link href="${initParam.root}resources/css/mypage.css" rel="stylesheet"/>
+<!-- 아이콘 만들기 api font-awesome -->
+<link href="${initParam.root}resources/css/font-awesome.min.css" rel="stylesheet" />
+<!-- 상품 보기 -->
 <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet"> 
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script> 
+
 </head>
 
 
@@ -51,6 +59,9 @@
 <script src="${initParam.root}resources/js/jquery.js"></script>
 <script src="${initParam.root}resources/js/jquery-ui.min.js"></script>
 <script src="${initParam.root}resources/js/script.js"></script>
+<!-- 유효성 검사를 위한 validate plug-in -->
+<script src="http://jqueryvalidation.org/files/dist/jquery.validate.min.js"></script>
+<script src="http://jqueryvalidation.org/files/dist/additional-methods.min.js"></script>
 <!-- 모든 컴파일된 플러그인을 포함합니다 (아래), 원하지 않는다면 필요한 각각의 파일을 포함하세요 -->
 <script src="${initParam.root}resources/js/bootstrap.min.js"></script>
 <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->

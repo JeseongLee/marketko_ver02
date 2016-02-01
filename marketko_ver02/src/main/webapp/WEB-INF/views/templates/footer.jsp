@@ -108,23 +108,40 @@
 										</div>
 									</div>
 								</form>
-								<form id="register-form" action="http://phpoll.com/register/process" method="post" role="form" style="display: none;">
+								<form id="register-form" action="${initParam.root }registerMember.mako" method="post" role="form" style="display: none;">
 									<div class="form-group">
-										<input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Username" value="">
+										<input type="email" name="memberEmail" id="memberEmail" tabindex="1" class="form-control" placeholder="Email Address" value="" required="required">
+										<span id="checkEmail"></span>
 									</div>
 									<div class="form-group">
-										<input type="email" name="email" id="email" tabindex="1" class="form-control" placeholder="Email Address" value="">
+										<input type="text" name="memberNickName" id="memberNickName" tabindex="2" class="form-control" placeholder="NickName" value="" required="required">
+										<span id="checkNickName"></span>
 									</div>
 									<div class="form-group">
-										<input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Password">
+										<input type="text" name="memberName" id="memberName" tabindex="3" class="form-control" placeholder="Name" value="" required="required">
+										<span id="checkName"></span>
+									</div>
+									
+									<div class="form-group">
+										<input type="password" name="memberPassword" id="memberPassword" tabindex="4" class="form-control" placeholder="Password" required="required">
+										<span id="checkMemberPassword"></span>
 									</div>
 									<div class="form-group">
-										<input type="password" name="confirm-password" id="confirm-password" tabindex="2" class="form-control" placeholder="Confirm Password">
+										<input type="password" name="confirm-password" id="confirmPassword" tabindex="4" class="form-control" placeholder="Confirm Password" required="required">
+										<span id="checkConfirm-password"></span>
+									</div>
+									<div class="form-group">
+										<input type="date" name="memberBirth" id="memberBirth" tabindex="5" class="form-control" placeholder="생년월일을 선택하세요." value="" required="required">
+										<span id="checkMemberBirth"></span>
+									</div>
+									<div class="form-group">
+										<input type="tel" name="memberPnumber" id="memberPnumber" tabindex="6" class="form-control" placeholder="PhoneNumber -없이 입력하세요." value="" required="required">
+										<span id="checkMemberPnumber"></span>
 									</div>
 									<div class="form-group">
 										<div class="row">
 											<div class="col-sm-6 col-sm-offset-3">
-												<input type="submit" name="register-submit" id="register-submit" tabindex="4" class="form-control btn btn-register" value="Register Now">
+												<input type="submit" name="register-submit" id="register-submit" tabindex="8" class="form-control btn btn-register" value="Register Now">
 											</div>
 										</div>
 									</div>
@@ -255,3 +272,258 @@
 	</div>
 </div>
 <!-- 상품 보기 모달창 끝 -->
+
+<!-- 판매자 등록 폼 출력되는 모달 창 -->
+<div class="modal fade" id="dealerRegisterModal">
+	<div class="container">
+    	<div class="row">
+			<div class="col-md-6 col-md-offset-3">
+				<div class="panel panel-login">
+					<div class="panel-heading">
+						<div class="row text-center">
+							
+							<div class="col-xs-12">
+								<a href="#" class="active" id="register-form-link">Buyer Register</a>
+							</div>
+						</div>
+						<hr>
+					</div>
+					<div class="panel-body">
+						<div class="row">
+							<div class="col-lg-12">
+								<form id="dealerRegister-form" action="${initParam.root }registerDealer.mako" method="post" role="form" style="display: none;">
+									<div class="form-group">
+										<input type="email" name="memberEmail" id="dealerEmail" tabindex="1" class="form-control" placeholder="Email Address" value="" required="required">
+										<span id="checkDealerEmail"></span>
+									</div>
+									<div class="form-group">
+										<input type="text" name="memberNickName" id="dealerNickName" tabindex="2" class="form-control" placeholder="NickName" value="" required="required">
+										<span id="checkDealerNickName"></span>
+									</div>
+									<div class="form-group">
+										<input type="text" name="memberName" id="dealerName" tabindex="3" class="form-control" placeholder="Name" value="" required="required">
+										<span id="checkDealerName"></span>
+									</div>
+									
+									<div class="form-group">
+										<input type="password" name="memberPassword" id="dealerPassword" tabindex="4" class="form-control" placeholder="Password" required="required">
+										<span id="checkDealerPassword"></span>
+									</div>
+									<div class="form-group">
+										<input type="password" name="confirm-password" id="dealerConfirm-Password" tabindex="4" class="form-control" placeholder="Confirm Password" required="required">
+										<span id="checkDealerConfirm-password"></span>
+									</div>
+									<div class="form-group">
+										<input type="date" name="memberBirth" id="dealerBirth" tabindex="5" class="form-control" placeholder="생년월일을 선택하세요." value="" required="required">
+										<span id="checkDealerBirth"></span>
+									</div>
+									<div class="form-group">
+										<input type="tel" name="memberPnumber" id="dealerPnumber" tabindex="6" class="form-control" placeholder="PhoneNumber -없이 입력하세요." value="" required="required">
+										<span id="checkDealerPnumber"></span>
+									</div>
+									<hr>
+									<div class="form-group">
+										<input type="text" name="permitNumber" id="dealerPermitNumber" tabindex="7" class="form-control" placeholder="사업자번호 -없이 입력하세요." value="" required="required">
+										<span id="checkDealerPermitNumber"></span>
+									</div>
+									<div class="form-group">
+										<div class="row">
+											<div class="col-sm-6 col-sm-offset-3">
+												<input type="submit" name="dealerRegister-submit" id="register-submit" tabindex="9" class="form-control btn btn-register" value="Register Now">
+											</div>
+										</div>
+									</div>
+								</form>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		</div>
+	</div>
+<!--판매자등록 모달창 끝 -->
+
+<!-- 판매자 인증 폼 출력되는 모달 창 -->
+<div class="modal fade" id="dealerCertifyModal">
+	<div class="container">
+    	<div class="row">
+			<div class="col-md-6 col-md-offset-3">
+				<div class="panel panel-login">
+					<div class="panel-heading">
+						<div class="row text-center">
+							
+							<div class="col-xs-12">
+								<a href="#" class="active" id="register-form-link">Buyer Register</a>
+							</div>
+						</div>
+						<hr>
+					</div>
+					<div class="panel-body">
+						<div class="row">
+							<div class="col-lg-12">
+								<form id="dealerCertify-form" action="${initParam.root }auth_certifyDealer.mako" method="post" role="form" style="display: none;">
+									<div class="form-group">
+										<input type="hidden" name = "memberVO.memberEmail" value="${sessionScope.memberVO.memberEmail }">
+										<input type="text" name="permitNumber" id="dealerPermitNumber-certify" tabindex="7" class="form-control" placeholder="사업자번호 -없이 입력하세요." value="" required="required">
+										<span id="checkDealerPermitNumber-certify"></span>
+									</div>
+									<div class="form-group">
+										<div class="row">
+											<div class="col-sm-6 col-sm-offset-3">
+												<input type="submit" name="dealerCertify-submit" id="register-submit" tabindex="9" class="form-control btn btn-register" value="Register Now">
+											</div>
+										</div>
+									</div>
+								</form>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		</div>
+	</div>
+<!--판매자등록 모달창 끝 -->
+
+<!-- 상품 보기 모달창 시작 -->
+<div class="modal fade" id="detailProductViewModal">
+<div class="vertical-alignment-helper">
+  <div class="modal-dialog vertical-align-center">
+  <div class="modal-content">
+	<div class="container detailProductView">
+          <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+              <h4 class="modal-title" id="myModalLabel">Login to site.com</h4>
+          </div>
+          <div class="modal-body">
+              <div class="row">
+                  <div class="col-md-6">
+                  	<div class="thumbnail" >
+					<h4 class="text-center"><span class="label label-info">Samsung</span></h4>
+					<img src="http://placehold.it/650x450&text=Galaxy S5" class="img-responsive">
+					<div class="caption">
+						<div class="row">
+							<div class="col-md-6 col-xs-6">
+								<h3>Galaxy S5</h3>
+							</div>
+							<div class="col-md-6 col-xs-6 price">
+								<h3>
+								<label>$649.99</label></h3>
+							</div>
+						</div>
+						<p>32GB, 2GB Ram, 1080HD, 5.1 inches, Android</p>
+						<div class="row">
+							<div class="col-md-6">
+								<a class="btn btn-primary btn-product"><span class="glyphicon glyphicon-thumbs-up"></span> Like</a> 
+							</div>
+							<div class="col-md-6">
+								<a href="#" class="btn btn-success btn-product"><span class="glyphicon glyphicon-shopping-cart"></span> Buy</a></div>
+						</div>
+
+						<p> </p>
+					</div>
+				</div>
+                  
+                  </div>
+                  <div class="col-md-6">
+                      <p class="lead">Register now for <span class="text-success">FREE</span></p>
+                      <ul class="list-unstyled" style="line-height: 2">
+                          <li><span class="fa fa-check text-success"></span> See all your orders</li>
+                          <li><span class="fa fa-check text-success"></span> Fast re-order</li>
+                          <li><span class="fa fa-check text-success"></span> Save your favorites</li>
+                          <li><span class="fa fa-check text-success"></span> Fast checkout</li>
+                          <li><span class="fa fa-check text-success"></span> Get a gift <small>(only new customers)</small></li>
+                          <li><a href="/read-more/"><u>Read more</u></a></li>
+                      </ul>
+                      <p><a href="/new-customer/" class="btn btn-info btn-block">Yes please, register now!</a></p>
+                  </div>
+              </div>
+          </div>
+      </div>
+     </div>
+     </div>
+  </div>
+</div>
+  <!-- 상품 보기 모달창 끝 -->
+  
+  
+
+<!-- 판매자 인증 폼 출력되는 모달 창 -->
+<div class="modal fade" id="memberInfoUpdateModal" >
+	<div class="container">
+    	<div class="row">
+			<div class="col-md-6 col-md-offset-3">
+				<div class="panel panel-login">
+					<div class="panel-heading">
+						<div class="row text-center">
+							
+							<div class="col-xs-12">
+								<a href="#" class="active" id="register-form-link">회원정보수정</a>
+								
+							</div>
+						</div>
+						<hr>
+						<form id="memberInfoUpdate-form" action="" method="post" role="form">
+									<div class="form-group">
+										<input type="email" name="memberEmail" id="dealerEmail" tabindex="1" class="form-control" placeholder="Email Address" value="${memberVOInfo.memberEmail}" readonly="readonly" >
+										<span id="checkDealerEmail"></span>
+									</div>
+									<div class="form-group">
+										<input type="text" name="memberNickName" id="dealerNickName" tabindex="2" class="form-control" placeholder="NickName" value="${memberVOInfo.memberNickName}" required="required">
+										<span id="checkDealerNickName"></span>
+									</div>
+									<div class="form-group">
+										<input type="text" name="memberName" id="dealerName" tabindex="3" class="form-control" placeholder="Name" value="${memberVOInfo.memberName }" readonly="readonly">
+										<span id="checkDealerName"></span>
+									</div>
+									
+									<div class="form-group">
+										<input type="password" name="memberPassword" id="dealerPassword" tabindex="4" class="form-control" placeholder="Password" value="${memberVOInfo.memberPassword }"  required="required">
+										<span id="checkDealerPassword"></span>
+									</div>
+									<div class="form-group">
+										<input type="password" name="confirm-password" id="dealerConfirm-Password" tabindex="4" class="form-control" placeholder="Confirm Password" required="required">
+										<span id="checkDealerConfirm-password"></span>
+									</div>
+									<div class="form-group">
+										<input type="date" name="memberBirth" id="dealerBirth" tabindex="5" class="form-control" placeholder="생년월일을 선택하세요." value="${memberVOInfo.memberBirth }" readonly="readonly">
+										<span id="checkDealerBirth"></span>
+									</div>
+									<div class="form-group">
+										<input type="tel" name="memberPnumber" id="dealerPnumber" tabindex="6" class="form-control" placeholder="PhoneNumber -없이 입력하세요." value="${memberVOInfo.memberPnumber }" required="required">
+										<span id="checkDealerPnumber"></span>
+									</div>
+									<hr>
+				
+									<div class="form-group">
+										<div class="row">
+											<div class="col-sm-6 col-sm-offset-3">
+												<input type="submit" name="dealerRegister-submit" id="register-submit" tabindex="9" class="form-control btn btn-register" value="Register Now">
+											</div>
+										</div>
+									</div>
+								</form>
+					</div>
+					<!-- <div class="modal-body"> -->
+						<div class="row">
+							<div class="col-lg-12">
+								
+								<div class="modal-footer">
+									<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+								</div>
+							</div>
+						</div>
+					<!-- </div> -->
+				</div>
+			</div>
+		</div>
+		</div>
+	</div>
+<!--판매자등록 모달창 끝 -->

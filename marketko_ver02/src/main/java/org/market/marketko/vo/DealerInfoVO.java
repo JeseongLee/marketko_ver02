@@ -2,14 +2,14 @@ package org.market.marketko.vo;
 
 public class DealerInfoVO {
 	 private MemberVO memberVO;
-	 private int permitNumber;
+	 private String permitNumber;
 	 private String dealerGrade;
 	 
 	public DealerInfoVO() {
 		super();
 	}
 	
-	public DealerInfoVO(MemberVO memberVO, int permitNumber, String dealerGrade) {
+	public DealerInfoVO(MemberVO memberVO, String permitNumber, String dealerGrade) {
 		super();
 		this.memberVO = memberVO;
 		this.permitNumber = permitNumber;
@@ -21,10 +21,10 @@ public class DealerInfoVO {
 	public void setMemberVO(MemberVO memberVO) {
 		this.memberVO = memberVO;
 	}
-	public int getPermitNumber() {
+	public String getPermitNumber() {
 		return permitNumber;
 	}
-	public void setPermitNumber(int permitNumber) {
+	public void setPermitNumber(String permitNumber) {
 		this.permitNumber = permitNumber;
 	}
 	public String getDealerGrade() {

@@ -159,19 +159,21 @@
 				</ul>				
 			</li>
             <li><a href="#">Store locator</a></li>
-			<!-- 검색 -->
-			<li class="span12">
-	            <form id="custom-search-form" class="form-search form-horizontal pull-right">
-	                <div class="input-append span12">
-	                    <input type="text" class="search-query mac-style" placeholder="Search">
-	                    <button type="submit" class="btn"><i class="fa fa-search"></i></button>
-	                </div>
-	            </form>
-	        </li>
-    	    <!-- 검색 -->
 		</ul>
         <ul class="nav navbar-nav navbar-right">
-        <li><a href="#" class="buyerRegister">판매자등록하기</a></li>
+		<c:choose>
+        <c:when test="${sessionScope.memberVO==null }">
+        <li><a href="#" class="dealerRegister">판매자회원가입</a></li>
+        </c:when>
+        <c:when test="${sessionScope.memberVO.memberAuth==0 }">
+        <li> <a href="#" class="dealerCertify">판매자등록하기</a></li>
+        <li><a href="${initParam.root }auth_memberMyPage.mako?memberEmail=${sessionScope.memberVO.memberEmail}" class="memberMyPage">마이페이지</a></li>
+        </c:when>
+        <c:otherwise>
+        <li><a href="${initParam.root }auth_memberMyPage.mako?memberEmail=${sessionScope.memberVO.memberEmail}" class="">마이페이지</a></li>
+        </c:otherwise>
+        </c:choose>
+        
        	<c:choose>
        		<c:when test="${sessionScope.memberVO==null}">
 		        <li><a href="#" class="memberRegister">회원가입</a></li>
